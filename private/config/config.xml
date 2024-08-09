@@ -1,0 +1,18 @@
+<Config>
+    <WebServer>
+        <Port>8080</Port>
+    </WebServer>
+    <Gradio>
+        <GradioApp>stabilityai/stable-diffusion-3-medium</GradioApp>
+        <!--<GradioApp>connor-33341/ImageAI</GradioApp>-->
+        <Endpoint>/infer</Endpoint>
+    </Gradio>
+    <AIConfig>
+        <Size>
+            <Width>1024</Width>
+            <Height>1024</Height>
+        </Size>
+        <GS>5</GS>
+        <IS>28</IS>
+    </AIConfig>
+</Config>
