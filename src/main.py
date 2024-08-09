@@ -79,8 +79,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             Result,Seed = GradioClient.predict(
                 prompt=Prompt,
                 negative_prompt=NegativePrompt,
-                seed=0,
-                randomize_seed=True, #if int(Seed) == 0 else False,
+                seed=Seed,
+                randomize_seed=True if int(Seed) == 0 else False,
                 width=int(CONFIG["AIConfig"]["Size"]["Width"]),
                 height=int(CONFIG["AIConfig"]["Size"]["Height"]),
                 guidance_scale=int(CONFIG["AIConfig"]["GS"]),
